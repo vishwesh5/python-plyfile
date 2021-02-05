@@ -722,7 +722,7 @@ class PlyElement(object):
             for prop in self.properties:
                 fields.extend(prop._to_fields(rec[prop.name]))
 
-            _np.savetxt(stream, [fields], '%.18g', newline='\n')
+            _np.savetxt(stream, [fields], '%.6g', newline='\n')
 
     def _read_bin(self, stream, byte_order):
         '''
